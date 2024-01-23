@@ -1,2 +1,3 @@
-# rust-random-number-game
-A random number game in rust
+# Random Number Game
+
+A random number game in rust.
