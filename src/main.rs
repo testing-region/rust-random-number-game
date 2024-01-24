@@ -3,7 +3,7 @@ extern crate rand;
 use colorz::Colorize;
 use rand::Rng;
 use std::cmp::Ordering;
-use std::io;
+use std::io::{self, Write};
 
 fn main() {
     println!("Guess the number!");
@@ -11,7 +11,8 @@ fn main() {
     let secret_number = rand::thread_rng().gen_range(1..101);
 
     loop {
-        println!("Please input your guess: ");
+        print!("Please input your guess: ");
+        std::io::stdout().flush().unwrap();
         let mut guess = String::new();
 
         // read and process input
